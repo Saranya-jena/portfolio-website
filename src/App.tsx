@@ -1,8 +1,14 @@
+import { CssBaseline, ThemeProvider } from "@material-ui/core";
 import React from "react";
-import "./App.css";
+import Home from "./Pages/Home";
+import theme from "./themes";
 
-function App() {
-  return <div className="App"></div>;
-}
-
+const App = () => {
+  return (
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <Home />
+    </ThemeProvider>
+  );
+};
 export default App;
